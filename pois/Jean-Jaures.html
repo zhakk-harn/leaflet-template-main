@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jean Jaurès</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="poi-container">
+        <h1>Jean Jaurès</h1>
+        <p>Named after the famous French socialist leader, this area is a key part of the city's transport and social network.</p>
+        <br>
+        <a href="../index.html" class="btn" style="background-color: #6b7280;">Back to Map</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const poiId = urlParams.get('id');
+        const state = localStorage.getItem('visitedPOIs');
+        const visited = state ? JSON.parse(state) : [];
+        if (!poiId || !visited.includes(poiId)) {
+            // Redirect back to map if accessed without being unlocked
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

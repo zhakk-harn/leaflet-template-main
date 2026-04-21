@@ -1,5 +1,6 @@
 const App = {
     visitedPOIs: [],
+    allPOIs: [],
 
     async init() {
         this.loadState();
@@ -25,6 +26,7 @@ const App = {
             const response = await fetch('data/pois.json');
             if (!response.ok) throw new Error("Network response was not ok");
             const data = await response.json();
+            this.allPOIs = data;
             
             data.forEach(poi => {
                 const isVisited = this.visitedPOIs.includes(poi.id);
@@ -32,6 +34,20 @@ const App = {
             });
         } catch (error) {
             console.error("Failed to load POIs:", error);
+        }
+    },
+
+    markAsVisited(poiId) {
+        if (!this.visitedPOIs.includes(poiId)) {
+            this.visitedPOIs.push(poiId);
+            localStorage.setItem('visitedPOIs', JSON.stringify(this.visitedPOIs));
+            
+            const poi = this.allPOIs.find(p => p.id === poiId);
+            if (poi) {
+                MapSystem.updatePOIMarker(poi, true);
+                // Optional: alert or toast the user
+                // alert(`You reached ${poi.name}!`);
+            }
         }
     }
 };

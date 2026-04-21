@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Viarme-Talensac</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="poi-container">
+        <h1>Viarme-Talensac</h1>
+        <p>A lively district known for its markets and vibrant local community.</p>
+        <br>
+        <a href="../index.html" class="btn" style="background-color: #6b7280;">Back to Map</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const poiId = urlParams.get('id');
+        const state = localStorage.getItem('visitedPOIs');
+        const visited = state ? JSON.parse(state) : [];
+        if (!poiId || !visited.includes(poiId)) {
+            // Redirect back to map if accessed without being unlocked
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

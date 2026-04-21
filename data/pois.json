@@ -1,16 +1,51 @@
 [
   {
-    "id": "poi-1",
-    "name": "Central Marker",
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "url": "/pois/poi-1.html"
+    "id": "EDNA",
+    "name": "EDNA",
+    "lat": 47.20411877400466,
+    "lng": -1.5630846419047972,
+    "url": "/pois/EDNA.html"
   },
   {
-    "id": "poi-2",
-    "name": "Eiffel Tower Point",
-    "lat": 48.8584,
-    "lng": 2.2945,
-    "url": "/pois/poi-2.html"
+    "id": "Commerce",
+    "name": "Commerce",
+    "lat": 47.21462300905903,
+    "lng": -1.5558587045459333,
+    "url": "/pois/Commerce.html"
+  },
+  {
+    "id": "Bretagne",
+    "name": "Bretagne",
+    "lat": 47.21731210470958,
+    "lng": -1.558382634618704,
+    "url": "/pois/Bretagne.html"
+  },
+  {
+    "id": "Jean Jaurès",
+    "name": "Jean Jaurès",
+    "lat": 47.21860250468865,
+    "lng": -1.560416662773181,
+    "url": "/pois/Jean-Jaures.html"
+  },
+  {
+    "id": "Viarme-Talensac",
+    "name": "Viarme-Talensac",
+    "lat": 47.22140594496348,
+    "lng": -1.5626614627683353,
+    "url": "/pois/Viarme-Talensac.html"
+  },
+  {
+    "id": "Implantation module",
+    "name": "Implantation module",
+    "lat": 47.2196667,
+    "lng": -1.5613333333333335,
+    "url": "/pois/Implantation-module.html"
+  },
+  {
+    "id": "Chapelle du Martray",
+    "name": "Chapelle du Martray",
+    "lat": 47.21956239801544,
+    "lng": 47.21956239801544,
+    "url": "/pois/Chapelle-du-Martray.html"
   }
 ]
